@@ -1,0 +1,40 @@
+{
+  "name": "practical-llm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "nodemon -r tsconfig-paths/register ./src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "git clean -xdf node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/anthropic": "^0.3.13",
+    "@langchain/community": "^0.3.29",
+    "@langchain/core": "0.3.38",
+    "@langchain/google-genai": "^0.1.8",
+    "config": "^3.3.12",
+    "dotenv": "^16.3.1",
+    "langchain": "^0.3.15",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/config": "^3.3.5",
+    "@types/node": "^20.10.5",
+    "nodemon": "^3.1.9",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@langchain/core": "0.3.38"
+    }
+  }
+}
