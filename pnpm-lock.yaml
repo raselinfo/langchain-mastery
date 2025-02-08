@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@langchain/core': 0.3.38
-
 importers:
 
   .:
@@ -23,6 +20,9 @@ importers:
       '@langchain/google-genai':
         specifier: ^0.1.8
         version: 0.1.8(@langchain/core@0.3.38(openai@4.83.0(ws@8.18.0)(zod@3.24.1)))(zod@3.24.1)
+      '@langchain/openai':
+        specifier: ^0.4.2
+        version: 0.4.2(@langchain/core@0.3.38(openai@4.83.0(ws@8.18.0)(zod@3.24.1)))(ws@8.18.0)
       config:
         specifier: ^3.3.12
         version: 3.3.12
@@ -101,7 +101,7 @@ packages:
     resolution: {integrity: sha512-2ZSr0bHVqkW5r4YeyL7zAyrb6I9oWt1uILs7Sw+sVInknCyxuS4mYJyr9/HCSG0g0EujFkFSeciG657Jtu/aTw==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.2.21 <0.4.0'
 
   '@langchain/community@0.3.29':
     resolution: {integrity: sha512-6XIPGctpH3KziFpdVDEvYBEQMMsNomffqy545shoxOLoMkZqgn1wfMs6R7ltzzS0p3LJUXW1RbwAUEuWp0rbuA==}
@@ -138,7 +138,7 @@ packages:
       '@huggingface/transformers': ^3.2.3
       '@ibm-cloud/watsonx-ai': '*'
       '@lancedb/lancedb': ^0.12.0
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.2.21 <0.4.0'
       '@layerup/layerup-security': ^1.5.12
       '@libsql/client': ^0.14.0
       '@mendable/firecrawl-js': ^1.4.3
@@ -485,19 +485,19 @@ packages:
     resolution: {integrity: sha512-aBz8IzEJfihOVz2GpqFrdLWjDlpscZUYIA7LZ2iazU7edO03etPaqxdexiYKr/Q+Be2D0BT7uaFJsouvQApIZA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.3.17 <0.4.0'
 
   '@langchain/openai@0.4.2':
     resolution: {integrity: sha512-Cuj7qbVcycALTP0aqZuPpEc7As8cwiGaU21MhXRyZFs+dnWxKYxZ1Q1z4kcx6cYkq/I+CNwwmk+sP+YruU73Aw==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.3.29 <0.4.0'
 
   '@langchain/textsplitters@0.1.0':
     resolution: {integrity: sha512-djI4uw9rlkAb5iMhtLED+xJebDdAG935AdP4eRTB02R7OB/act55Bj9wsskhZsvuyQRpO4O1wQOp85s6T6GWmw==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.2.21 <0.4.0'
 
   '@playwright/test@1.50.1':
     resolution: {integrity: sha512-Jii3aBg+CEDpgnuDxEp/h7BimHcUTDlpEtce89xEumlJ5ef2hqepZ+PWp1DDpYC/VO9fmWVI1IlEaoI5fK9FXQ==}
@@ -826,7 +826,7 @@ packages:
       '@langchain/aws': '*'
       '@langchain/cerebras': '*'
       '@langchain/cohere': '*'
-      '@langchain/core': 0.3.38
+      '@langchain/core': '>=0.2.21 <0.4.0'
       '@langchain/deepseek': '*'
       '@langchain/google-genai': '*'
       '@langchain/google-vertexai': '*'
